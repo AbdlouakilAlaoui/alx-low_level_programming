@@ -1,4 +1,3 @@
-0x0E. C - Structures, typedef
 C - Structures, typedef
 TASKS
 0. Poppy
