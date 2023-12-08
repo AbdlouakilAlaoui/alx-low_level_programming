@@ -1,19 +1,19 @@
-#include "lists.h"
+#include <stddef.h>
 
-/**
- * dlistint_len - returns length of dlist
- * @h: address of head node 
- * 
- * Return: size of list
- */
-size_t dlistint_len(const dlistint_t *h)
+typedef struct dlistint_s 
 {
-    size_t i = 0;
-    
-    while (h)
-    {
-         h = h->next;
-         i++;
+    int n;
+    struct dlistint_s *prev;
+    struct dlistint_s *next;
+} dlistint_t;
+
+size_t dlistint_len(const dlistint_t *h) {
+    size_t count = 0; 
+
+    while (h != NULL) {
+        count++;
+        h = h->next;
     }
-    return(i);
+
+    return count;
 }
