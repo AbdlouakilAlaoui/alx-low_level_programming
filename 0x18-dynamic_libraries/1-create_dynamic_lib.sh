@@ -1,3 +1,4 @@
 #!/bin/bash
+
 gcc -fPTC -c *.c
-gcc -shared *.o -o gm
+gcc -shared *.o -o liball.so
